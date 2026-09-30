@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فندق فاسق نواكشوط | FASQ Hotel Nouakchott</title>
+<meta name="description" content="فندق فاسق في قلب نواكشوط: غرف أنيقة، مسبح، سبا، نادٍ رياضي وسطح بإطلالة على المدينة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0B1B3A; --indigo:#2C4A9A; --sand:#EADFC8; --brass:#C89B3C; --ink:#101828; --white:#FFFFFF;
+  --bg:#FBF7EE; --text:#1D2433;
+  --head:'Reem Kufi','Tajawal',serif; --body:'Tajawal',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.9;font-size:1.05rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+/* Hero: the glowing curved lines of the building draw themselves */
+.hero{position:relative;min-height:100svh;background:var(--night);color:var(--white);display:grid;place-items:center;overflow:hidden;text-align:center;padding:2rem}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero path{fill:none;stroke:#F4FFF0;stroke-width:3;stroke-linecap:round;stroke-dasharray:1600;stroke-dashoffset:1600;filter:drop-shadow(0 0 6px #B8FFD0);animation:draw 3.2s cubic-bezier(.6,.05,.2,1) forwards}
+.hero path:nth-child(2){animation-delay:.25s}.hero path:nth-child(3){animation-delay:.5s}
+.hero path:nth-child(4){animation-delay:.75s}.hero path:nth-child(5){animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-content{position:relative;z-index:1;max-width:44rem;opacity:0;animation:appear 1.2s 1.6s ease forwards}
+@keyframes appear{to{opacity:1}}
+.hero h1{font-family:var(--head);font-size:clamp(3rem,10vw,6rem);line-height:1.1;font-weight:700}
+.hero .en{font-family:var(--head);letter-spacing:.35em;color:var(--brass);margin:.6rem 0 1.2rem;font-size:1.1rem}
+.hero p{font-size:1.2rem;color:#DCE4F5}
+.btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;padding:.85rem 1.8rem;border-radius:999px;text-decoration:none;font-weight:700;border:2px solid var(--brass);transition:transform .25s,background .25s,color .25s}
+.btn.solid{background:var(--brass);color:var(--night)}
+.btn:hover{transform:translateY(-3px)}
+.btn.ghost{color:var(--white)}
+.btn.ghost:hover{background:var(--brass);color:var(--night)}
+
+section{padding:5rem 1.25rem}
+.wrap{max-width:68rem;margin:auto}
+h2{font-family:var(--head);font-size:clamp(2rem,5vw,3rem);color:var(--night);margin-bottom:1rem}
+.lead{max-width:38rem;color:#4A5468}
+
+/* Rating strip */
+.rating{background:var(--sand);padding:1.4rem 1.25rem}
+.rating .wrap{display:flex;gap:1.5rem 3rem;flex-wrap:wrap;justify-content:center;align-items:center;font-weight:500}
+.rating b{font-family:var(--head);font-size:2rem;color:var(--indigo)}
+
+/* Feature rows */
+.row{display:grid;gap:2rem;align-items:center;grid-template-columns:1fr;margin-bottom:5rem}
+.row:last-child{margin-bottom:0}
+@media(min-width:800px){.row{grid-template-columns:1.1fr 1fr;gap:4rem}.row.flip{grid-template-columns:1fr 1.1fr}.row.flip .pic{order:2}}
+.pic{overflow:hidden;border-radius:2rem 2rem 2rem .4rem;aspect-ratio:4/3;background:var(--sand)}
+.pic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.pic:hover img{transform:scale(1.06)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Tea section */
+.tea{background:var(--night);color:var(--white)}
+.tea h2{color:var(--white)}.tea .lead{color:#C9D3EA}
+.tea .pic{border-radius:.4rem 2rem 2rem 2rem}
+
+/* Amenities */
+.amen{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1rem;margin-top:2rem}
+.amen div{padding:1.1rem;border-right:4px solid var(--brass);background:var(--white);font-weight:500}
+
+/* Contact */
+.contact{background:var(--indigo);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact dl{display:grid;gap:1.2rem;margin:1.5rem 0 2rem}
+.contact dt{color:var(--sand);font-size:.95rem}
+.contact dd{font-size:1.25rem;font-weight:500}
+footer{background:var(--night);color:#93A0BD;text-align:center;padding:1.5rem;font-size:.9rem}
+
+@media(prefers-reduced-motion:reduce){
+  .hero path{animation:none;stroke-dashoffset:0}
+  .hero-content{animation:none;opacity:1}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="images/night.jpg" alt="واجهة فندق فاسق ليلاً بخطوط ضوئية منحنية">
+  <svg viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 200 C 250 120, 450 300, 700 200 S 950 130, 1020 170"/>
+    <path d="M-20 260 C 250 180, 450 360, 700 260 S 950 190, 1020 230"/>
+    <path d="M-20 320 C 250 240, 450 420, 700 320 S 950 250, 1020 290"/>
+    <path d="M-20 380 C 250 300, 450 480, 700 380 S 950 310, 1020 350"/>
+    <path d="M-20 440 C 250 360, 450 540, 700 440 S 950 370, 1020 410"/>
+  </svg>
+  <div class="hero-content">
+    <h1>فندق فاسق</h1>
+    <div class="en">FASQ HOTEL</div>
+    <p>إقامة راقية في قلب نواكشوط، بضيافة موريتانية أصيلة.</p>
+    <div class="btns">
+      <a class="btn solid" href="tel:+22244491956">احجز الآن</a>
+      <a class="btn ghost" href="#rooms">شاهد الغرف</a>
+    </div>
+  </div>
+</header>
+
+<div class="rating">
+  <div class="wrap">
+    <span><b>4.6</b> / 5 على Booking.com</span>
+    <span>225 تقييمًا</span>
+    <span>واي فاي مجاني</span>
+    <span>غرف لغير المدخنين</span>
+  </div>
+</div>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="row reveal">
+      <div class="pic"><img src="images/room.jpg" alt="غرفة نوم بسرير أزرق ولوحات فنية" loading="lazy"></div>
+      <div>
+        <h2>غرف هادئة وأنيقة</h2>
+        <p class="lead">أسرّة مريحة بألوان النيلي، ستائر واسعة، مكيّف هواء وتفاصيل مدروسة لتنام جيدًا بعد يوم طويل في العاصمة.</p>
+      </div>
+    </div>
+
+    <div class="row flip reveal">
+      <div class="pic"><img src="images/terrace.jpg" alt="منظر علوي لسطح الفندق ومقاعد الجلوس" loading="lazy"></div>
+      <div>
+        <h2>سطح بإطلالة على المدينة</h2>
+        <p class="lead">جلسات خارجية على أرضية من الرخام الداكن والخشب، مع مساحات مناسبة للعائلة وللقاءات العمل.</p>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="pic"><img src="images/swings.jpg" alt="طاولة بمقاعد معلقة تطل على نواكشوط" loading="lazy"></div>
+      <div>
+        <h2>اجلس فوق نواكشوط</h2>
+        <p class="lead">طاولة بمقاعد أرجوحة تطل على أسطح المدينة، مكان جميل لفنجان قهوة عند الغروب.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tea">
+  <div class="wrap">
+    <div class="row flip reveal">
+      <div class="pic"><img src="images/tea.jpg" alt="نساء يعددن الشاي الموريتاني على حصير تقليدي" loading="lazy"></div>
+      <div>
+        <h2>الشاي الموريتاني، ثلاث كؤوس</h2>
+        <p class="lead">الضيافة عندنا تبدأ بالشاي. تقاليد الصحراء حاضرة في زوايا الفندق، بالحصير والسجاد والصواني النحاسية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <h2>كل ما تحتاجه في مكان واحد</h2>
+    <div class="amen">
+      <div>مسبح</div><div>سبا</div><div>نادٍ رياضي</div>
+      <div>واي فاي مجاني</div><div>تكييف هواء</div><div>مداخل ومنحدرات لذوي الإعاقة</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>احجز إقامتك</h2>
+    <dl>
+      <div><dt>العنوان</dt><dd>شارع المختار ولد داداه، نواكشوط، موريتانيا</dd></div>
+      <div><dt>الهاتف</dt><dd dir="ltr" style="text-align:right">+222 44 49 19 56</dd></div>
+    </dl>
+    <div class="btns" style="justify-content:flex-start">
+      <a class="btn solid" href="tel:+22244491956">اتصل بنا</a>
+      <a class="btn ghost" href="https://www.booking.com" target="_blank" rel="noopener">احجز عبر Booking.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>© Fasq Hotel Nouakchott</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold: .15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
